@@ -1,0 +1,13 @@
+<h2><%= @post.title %></h2>
+
+<p><%= @post.body %></p>
+
+<ul class="list-inline">
+  <li><a class="btn btn-default" href="/posts">Go back</a></li>
+  <li><a class="btn btn-primary" href="/posts/<%= @post.id %>/edit">Edit</a></li>
+  <li>
+    <form action="/posts/<%= @post.id %>/destroy" method="post">
+      <input type="submit" class="btn btn-danger" value="Delete"></a>
+    </form>
+  </li>
+</ul>

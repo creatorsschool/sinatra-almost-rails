@@ -1,0 +1,13 @@
+<h2>All posts</h2>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h2>
+        <a href="/posts/<%= post.id %>"><%= post.title %></a>
+      </h2>
+  </li>
+  <% end %>
+</ul>
+
+<a class="btn btn-primary" href="/posts/new">New post</a>
